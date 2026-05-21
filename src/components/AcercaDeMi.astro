@@ -1,0 +1,89 @@
+<section id="about" class="w-full bg-[#0d0f18] py-20 px-6">
+
+  <!-- Title -->
+  <h2 class="text-white text-center text-3xl font-semibold mb-16">Sobre Mí</h2>
+
+  <!-- Content -->
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
+
+    <!-- Left: Person image -->
+    <div class="w-full md:w-2/5 flex-shrink-0">
+      <img
+        src="https://picsum.photos/seed/architect/500/650"
+        alt="Arturo Fajardo - Arquitecto"
+        class="w-full max-w-sm mx-auto object-cover grayscale"
+      />
+    </div>
+
+    <!-- Right: Content -->
+    <div class="w-full md:w-3/5 flex flex-col gap-6">
+
+      <!-- Speech bubble -->
+      <div class="relative inline-block self-start">
+        <div class="border-2 border-white px-6 md:px-8 py-3 md:py-4">
+          <span class="text-white text-lg md:text-xl font-medium">Hola, soy Arturo</span>
+        </div>
+        <div class="absolute -bottom-3 left-6 w-0 h-0
+          border-l-[10px] border-l-transparent
+          border-r-[10px] border-r-transparent
+          border-t-[12px] border-t-white">
+        </div>
+      </div>
+
+      <!-- Bio text -->
+      <p class="text-gray-400 text-sm leading-relaxed">
+        Licenciado en Arquitectura por la Universidad Veracruzana, especializado en proyectos arquitectónicos, supervisión de obra, modelado 3D y renders arquitectónicos. Desde Veracruz, desarrollo propuestas que combinan funcionalidad, estética y atención al detalle, con un enfoque moderno y profesional.
+      </p>
+
+      <!-- Stats row -->
+      <div class="flex items-center gap-4 md:gap-8 py-2">
+        <div class="text-center">
+          <p class="text-white text-xl md:text-2xl font-black">+5</p>
+          <p class="text-gray-400 text-xs tracking-wide mt-1">Años de experiencia</p>
+        </div>
+        <div class="w-px h-8 md:h-10 bg-white/20"></div>
+        <div class="text-center">
+          <p class="text-white text-xl md:text-2xl font-black">+30</p>
+          <p class="text-gray-400 text-xs tracking-wide mt-1">Proyectos realizados</p>
+        </div>
+        <div class="w-px h-8 md:h-10 bg-white/20 hidden sm:block"></div>
+        <div class="text-center hidden sm:block">
+          <p class="text-white text-xl md:text-2xl font-black">VER</p>
+          <p class="text-gray-400 text-xs tracking-wide mt-1">Veracruz, México</p>
+        </div>
+      </div>
+      
+      <!-- Expertise tags -->
+      <div class="flex flex-wrap gap-2">
+        {["Arquitectura Residencial", "Supervisión de Obra", "Modelado 3D", "Renders Arquitectónicos", "Desarrollo de Proyectos"].map((tag) => (
+          <span class="text-white/70 text-xs border border-white/20 rounded-full px-3 py-1">{tag}</span>
+        ))}
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex items-center gap-3 md:gap-4 flex-wrap">
+        <a
+          href="#contact"
+          class="bg-[#6E7C93] hover:bg-[#d44d30] text-white text-xs font-bold tracking-widest uppercase px-6 md:px-7 py-3 md:py-4 flex items-center gap-2 transition-colors duration-200"
+        >
+          Contactar
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+        <a
+          href="/cv.pdf"
+          download
+          class="glass-container text-white text-xs font-bold tracking-widest uppercase px-6 md:px-7 py-3 md:py-4 flex items-center gap-2 transition-all duration-200 hover:brightness-125 rounded-none"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"/>
+          </svg>
+          Descargar CV
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</section>

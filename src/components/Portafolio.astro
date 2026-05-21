@@ -1,0 +1,165 @@
+<section id="works" class="w-full mt-20">
+
+    <!-- Title -->
+  <h2 class="text-white text-center text-3xl font-semibold mb-4">Mis Servicios</h2>
+  <p class="text-gray-400 text-center text-sm max-w-xl mx-auto mb-16">
+    Soluciones arquitectónicas integrales, desde la conceptualización hasta la entrega final de obra.
+  </p>
+
+  <!-- Grid 3 columnas x 2 filas, sin gaps -->
+  <div class="grid grid-cols-1 md:grid-cols-3">
+
+    <!-- 1. Bathroom Refresh -->
+    <div class="relative group overflow-hidden h-72 md:h-96 cursor-pointer" onclick="openModal('https://picsum.photos/seed/bathroom/800/600')">
+      <!-- Reemplaza src con tu imagen -->
+      <img
+        src="https://picsum.photos/seed/bathroom/800/600"
+        alt="Bathroom Refresh"
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors duration-300"></div>
+
+      <!-- Play icon top-left -->
+      <div class="absolute top-6 left-6">
+        <div class="w-9 h-9 rounded-full border-2 border-white flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white fill-white" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Text bottom-left -->
+      <div class="absolute bottom-6 left-6">
+        <p class="text-white/80 text-xs font-semibold tracking-wide mb-1">Interior Design</p>
+        <h3 class="text-white text-2xl font-bold">Bathroom Refresh</h3>
+      </div>
+    </div>
+
+    <!-- 2. Hills Apartment -->
+    <div class="relative group overflow-hidden h-72 md:h-96 cursor-pointer" onclick="openModal('https://picsum.photos/seed/apartment/800/600')">
+      <img
+        src="https://picsum.photos/seed/apartment/800/600"
+        alt="Hills Apartment"
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      <div class="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors duration-300"></div>
+      <div class="absolute bottom-6 left-6">
+        <p class="text-white/80 text-xs font-semibold tracking-wide mb-1">Architecture</p>
+        <h3 class="text-white text-2xl font-bold">Hills Apartment</h3>
+      </div>
+    </div>
+
+    <!-- 3. Story Restaurant -->
+    <div class="relative group overflow-hidden h-72 md:h-96 cursor-pointer" onclick="openModal('https://picsum.photos/seed/restaurant/800/600')">
+      <img
+        src="https://picsum.photos/seed/restaurant/800/600"
+        alt="Story Restaurant"
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      <div class="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors duration-300"></div>
+      <div class="absolute bottom-6 left-6">
+        <p class="text-white/80 text-xs font-semibold tracking-wide mb-1">Branding</p>
+        <h3 class="text-white text-2xl font-bold">Story Restaurant</h3>
+      </div>
+    </div>
+
+    <!-- 4. Room Furniture -->
+    <div class="relative group overflow-hidden h-72 md:h-96 cursor-pointer" onclick="openModal('https://picsum.photos/seed/furniture/800/600')">
+      <img
+        src="https://picsum.photos/seed/furniture/800/600"
+        alt="Room Furniture"
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      <div class="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors duration-300"></div>
+      <div class="absolute bottom-6 left-6">
+        <p class="text-white/80 text-xs font-semibold tracking-wide mb-1">Industrial Design</p>
+        <h3 class="text-white text-2xl font-bold">Room Furniture</h3>
+      </div>
+    </div>
+
+    <!-- 5. Maracana Cups -->
+    <div class="relative group overflow-hidden h-72 md:h-96 cursor-pointer" onclick="openModal('https://picsum.photos/seed/cups/800/600')">
+      <img
+        src="https://picsum.photos/seed/cups/800/600"
+        alt="Maracana Cups"
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      <div class="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors duration-300"></div>
+      <div class="absolute bottom-6 left-6">
+        <p class="text-white/80 text-xs font-semibold tracking-wide mb-1">Branding</p>
+        <h3 class="text-white text-2xl font-bold">Maracana Cups</h3>
+      </div>
+    </div>
+
+    <!-- 6. Timeless Motion -->
+    <div class="relative group overflow-hidden h-72 md:h-96 cursor-pointer" onclick="openModal('https://picsum.photos/seed/motion/800/600')">
+      <img
+        src="https://picsum.photos/seed/motion/800/600"
+        alt="Timeless Motion"
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300"></div>
+      <div class="absolute bottom-6 left-6">
+        <p class="text-white/80 text-xs font-semibold tracking-wide mb-1">Art</p>
+        <h3 class="text-white text-2xl font-bold">Timeless Motion</h3>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modal for image viewing -->
+  <div id="imageModal" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-4 opacity-0 transition-opacity duration-300" onclick="closeModal()">
+    <button class="absolute top-6 right-6 text-white text-4xl hover:text-gray-300 transition-colors z-10">&times;</button>
+    <div class="relative overflow-hidden cursor-zoom-in" onclick="event.stopPropagation()">
+      <img id="modalImage" src="" alt="" class="max-w-full max-h-full object-contain transition-transform duration-300" onclick="toggleZoom(event)" />
+    </div>
+  </div>
+
+  <script is:inline>
+    let currentZoom = 1;
+
+    function openModal(imageSrc) {
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = imageSrc;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      
+      // Trigger animation after a small delay
+      requestAnimationFrame(() => {
+        modal.classList.remove('opacity-0');
+      });
+      
+      document.body.style.overflow = 'hidden';
+      currentZoom = 1;
+      modalImage.style.transform = 'scale(1)';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.add('opacity-0');
+      
+      // Wait for animation to finish before hiding
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }, 300);
+      
+      document.body.style.overflow = 'auto';
+    }
+
+    function toggleZoom(event) {
+      const modalImage = document.getElementById('modalImage');
+      currentZoom = currentZoom === 1 ? 2 : 1;
+      modalImage.style.transform = `scale(${currentZoom})`;
+      modalImage.style.cursor = currentZoom === 1 ? 'zoom-in' : 'zoom-out';
+    }
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+
+</section>

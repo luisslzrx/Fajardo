@@ -244,18 +244,28 @@
   // Touch/Swipe functionality
   let touchStartX = 0;
   let touchEndX = 0;
+  let isDragging = false;
 
-  carouselTrack.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
+  const carouselContainer = document.getElementById('carouselContainer');
+
+  carouselContainer.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    isDragging = true;
   }, { passive: true });
 
-  carouselTrack.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
+  carouselContainer.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    touchEndX = e.touches[0].clientX;
+  }, { passive: true });
+
+  carouselContainer.addEventListener('touchend', (e) => {
+    if (!isDragging) return;
+    isDragging = false;
     handleSwipe();
   }, { passive: true });
 
   function handleSwipe() {
-    const swipeThreshold = 50;
+    const swipeThreshold = 30;
     const diff = touchStartX - touchEndX;
     
     if (Math.abs(diff) > swipeThreshold) {
